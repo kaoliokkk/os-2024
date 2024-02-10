@@ -23,7 +23,8 @@ author: "Морозов Михаил Евгеньевич"
 # Выполнение лабораторной работы
 1.1 Подготовка
 Git нужно узнать вас , имя (э. почту), установить параметр окончаний строк,установка отображения unicode.
-![image]((https://github.com/kaoliokkk/os-2024/tree/master/labs2024/lab1)){lab1.1}
+![image](https://github.com/kaoliokkk/os-2024/tree/master/labs2024/lab1){lab1.1}
+
 
 
 1.2 Создание проекта
