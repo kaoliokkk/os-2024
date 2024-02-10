@@ -37,19 +37,19 @@ Git нужно узнать вас , имя (э. почту), установит
 Внесение различных изменений в код файла , а также их сохранений и подпись. А также про тэги к разным версиям. + История
 ADD,Коммит и логи.
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.3.png)
+![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img%20/lab%201.3.png)
 {рис 3}
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.4.png)
+![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img%20/lab%201.4.png)
 {рис 4}
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.5.png)
+![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img%20/lab%201.5.png)
 {рис 5}
 
 1.4 Работа с версиями и тэги
 СОздание тегов перемещние по тега в истории.
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.6.png)
+![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img%20/lab%201.6.png)
 {рис 6}
 
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img/lab%201.7.png)
@@ -70,22 +70,22 @@ ADD,Коммит и логи.
 
 1.7 Работа с объектами git
 В прошлом шаге мы изучили команды с помощью которых можно посмотреть хэши , а теперь изучаем перемещение между объектами по их хэшам.
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.10.png)
+![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img%20/lab%201.10.png)
 {рис 10}
 
 1.8 Создание ветки и переключение между ними. А также их слияние и взаимодействие между ними.
 Так как я делаю отчет после выполнения лабораторной работы и мои видео были записаны с поломками в моей аппаратуре , то мне придется делать скриншоты сейчас поэтому часть информации я буду упускать такое как создание и пошаговое выполнение и буду показывать только результат. 
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.11.png)
+![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img%20/lab%201.11.png)
 {рис 11}
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.12.png)
+![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img%20/lab%201.12.png)
 {рис 12}
 
 1.9 Клонирование репозиториев и чистый репозиторий.
 Далее мы просто обучаемся тому как склонировать наш репозиторий, проводим различные манипуляции с ними, понимаем как они взаимодействуют между собой и учимся создавать читый репозиторий.
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img/lab%201.9.png)
+![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img%20/lab%201.13.png)
 {рис 13}
 
 
