@@ -23,14 +23,14 @@ author: "Морозов Михаил Евгеньевич"
 # Выполнение лабораторной работы
 1.1 Подготовка
 Git нужно узнать вас , имя (э. почту), установить параметр окончаний строк,установка отображения unicode.
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.1%20.png)
+![image]([https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.1%20.png](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img/lab%201.1%20.png))
 {рис 1}
 
 
 
 1.2 Создание проекта
 Создание репозитория и файла(демоснтрация выполненой работы с помощью скриншотов с выводом всех имеющихся файлов)
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.2.png)
+![image]([https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.2.png](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img/lab%201.2.png))
 {рис 2}
 
 1.3 Внесение изменений
@@ -52,7 +52,7 @@ ADD,Коммит и логи.
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.6.png)
 {рис 6}
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.7.png)
+![image]([https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.7.png](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img/lab%201.7.png))
 {рис 7}
 
 
@@ -60,7 +60,7 @@ ADD,Коммит и логи.
 Я проделл все шаги указаные в методическом материале. В качестве доказательства я бы хотел опубликовать скриншоты выполнения проделанной работы  из моего скринкаста без звука ,но к сожалению помимо звука возникли и другие сложности в частности с видео (прикрепил скриншот).
 
 Некоторые изменения можно увидеть в логах, потому что такие изменения как измениния коммитов в логах видно(на предидущих скриншотах). 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.8.png)
+![image]([https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.8.png](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img/lab%201.8.png))
 {рис 8}
 
 1.6 Git внутри: Каталог.git База данных объектов. Config File. Ветки и теги. Файл HEAD.
@@ -85,7 +85,7 @@ ADD,Коммит и логи.
 1.9 Клонирование репозиториев и чистый репозиторий.
 Далее мы просто обучаемся тому как склонировать наш репозиторий, проводим различные манипуляции с ними, понимаем как они взаимодействуют между собой и учимся создавать читый репозиторий.
 
-![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.13.png)
+![image]([https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.13.png](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/img/lab%201.9.png))
 {рис 13}
 
 
