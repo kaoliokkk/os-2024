@@ -32,14 +32,17 @@ Git нужно узнать вас , имя (э. почту), установит
 Создание репозитория и файла(демоснтрация выполненой работы с помощью скриншотов с выводом всех имеющихся файлов)
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.2.png)
 {рис 2}
+
 1.3 Внесение изменений
 Внесение различных изменений в код файла , а также их сохранений и подпись. А также про тэги к разным версиям. + История
 ADD,Коммит и логи.
 
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.3.png)
 {рис 3}
+
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.4.png)
 {рис 4}
+
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.5.png)
 {рис 5}
 
@@ -48,6 +51,7 @@ ADD,Коммит и логи.
 
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.6.png)
 {рис 6}
+
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.7.png)
 {рис 7}
 
@@ -74,8 +78,10 @@ ADD,Коммит и логи.
 
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.11.png)
 {рис 11}
+
 ![image](https://github.com/kaoliokkk/os-2024/blob/master/labs2024/lab1/lab%201.12.png)
 {рис 12}
+
 1.9 Клонирование репозиториев и чистый репозиторий.
 Далее мы просто обучаемся тому как склонировать наш репозиторий, проводим различные манипуляции с ними, понимаем как они взаимодействуют между собой и учимся создавать читый репозиторий.
 
