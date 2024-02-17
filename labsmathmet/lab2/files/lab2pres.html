@@ -1,0 +1,168 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><hr>
+<h2 id="front-matter">Front matter</h2>
+<p>lang: ru-RU
+title: Лабораторная работа №2
+subtitle: Задача о погоне
+author: Морозов М. Е.</p>
+<ul>
+<li>institute:</li>
+<li>Российский университет дружбы народов, Москва, Россия
+date: 16 февраля 2024</li>
+</ul>
+<h2 id="i18n-babel">i18n babel</h2>
+<p>babel-lang: russian
+babel-otherlangs: english</p>
+<h2 id="formatting-pdf">Formatting pdf</h2>
+<p>toc: false
+toc-title: Содержание
+slide_level: 2
+aspectratio: 169
+section-titles: true
+theme: metropolis
+header-includes:</p>
+<ul>
+<li>\metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}</li>
+<li>&#39;\makeatletter&#39;</li>
+<li>&#39;\beamer@ignorenonframefalse&#39;</li>
+<li>&#39;\makeatother&#39;</li>
+</ul>
+<hr>
+<h1 id="-">Вводная часть</h1>
+<p>Кривая погони — кривая, представляющая собой решение задачи о «погоне», которая ставится следующим образом. Пусть точка 
+$A$ равномерно движется по некоторой заданной кривой. Требуется найти траекторию равномерного движения точки $P$
+такую, что касательная, проведённая к траектории в любой момент движения, проходила бы через соответствующее этому моменту положение точки 
+$A$.</p>
+<p>На море в тумане катер береговой охраны преследует лодку браконьеров. Через определенный промежуток времени туман рассеивается, и лодка обнаруживается на расстоянии 20,5 км от катера. Затем лодка снова скрывается в тумане и уходит прямолинейно в неизвестном направлении. Известно, что скорость катера в 5,5 раза больше скорости браконьерской лодки.</p>
+<h2 id="-">Цели</h2>
+<p>Построение математических моделей для выбора правильной стратегии при решении задач поиска.</p>
+<h2 id="-">Задачи</h2>
+<ol>
+<li>Запишите уравнение, описывающее движение катера, с начальными условиями для двух случаев (в зависимости от расположения катера относительно лодки в начальный момент времени).</li>
+<li>Постройте траекторию движения катера и лодки для двух случаев.</li>
+<li>Найдите точку пересечения траектории катера и лодки</li>
+</ol>
+<h2 id="-">Материалы и методы</h2>
+<p>Язык программирования:</p>
+<p>Julia</p>
+<p>Библеотеки:</p>
+<p>OrdinaryDiffEq,Plots</p>
+<h1 id="-">Выполнение лабораторной работы</h1>
+<p>Запишем уравнение описывающее движение катера, с начальными условиями для двух случаев.</p>
+<p>Принимем за $t_0 = 0$, $x<em>0 = 0$ - место нахождения лодки браконьеров в момент обнаружения.
+($x</em>{k0} = k$) - место нахождения катера береговой охраны относительно лодки браконьеров в момент обнаружения лодки.</p>
+<p>Введем полярные координаты.</p>
+<p>Траектория катера должна быть такой, чтобы и катер, и лодка все время были на одном расстоянии от полюса $\theta$ , только в этом случае траектория
+катера пересечется с траекторией лодки. </p>
+<p>Поэтому для начала катер береговой охраны должен двигаться некоторое время прямолинейно, пока не окажется на том же расстоянии от полюса, что и лодка браконьеров. После этого катер береговой охраны должен двигаться вокруг полюса удаляясь от него с той же скоростью, что и лодка браконьеров.</p>
+<p>Чтобы найти расстояние $x$ (расстояние после которого катер начнет двигаться вокруг полюса), необходимо составить простое уравнение. </p>
+<p>Пусть через время $t$ катер и лодка окажутся на одном расстоянииx от полюса. </p>
+<p>Время, за которое они пройдут это расстояние, вычисляется как $\dfrac{x}{v}$ или $\dfrac{k-x}{5.5v}$ (во втором случае $\dfrac{k+x}{5.5v}$). </p>
+<p>Так как время одно и то же, то эти величины одинаковы. Тогда два значения $x_1 = \dfrac{2k}{13}$ и $x_2 = \dfrac{2k}{9}$, для двух случаев.</p>
+<p>После того, как катер береговой охраны окажется на одном расстоянии от полюса, что и лодка, он должен сменить прямолинейную траекторию и начать двигаться вокруг полюса удаляясь от него со скоростью лодки $v$. </p>
+<p>Для этого скорость катера раскладываем на две составляющие: $v<em>{r}$ - радиальная скорость и  - $v</em>{\tau}$ тангенциальная скорость. </p>
+<p>Тангенциальная скорость – это линейная скорость вращения катера относительно полюса. Она равна произведению угловой скорости $\dfrac{d \theta}{dt}$ на радиус $r$, $r \dfrac{d \theta}{dt}$.</p>
+<p>$$v_{\tau} = \sqrt{30.25v^2-v^2} = \sqrt{29.25}v$$</p>
+<p>Так:</p>
+<p>$$
+r\dfrac{d \theta}{dt} = \sqrt{29.25}v
+$$</p>
+<p>Решение задачи сводится к решению системы:</p>
+<p>$$\begin{cases}
+&amp;\dfrac{dr}{dt} = v\
+&amp;r\dfrac{d \theta}{dt} = \sqrt{29.25}v
+\end{cases}$$</p>
+<p>С начальными условиями для первого случая:</p>
+<p>$$\begin{cases}
+&amp;{\theta}_0 = 0\  \tag{1}
+&amp;r_0 = x_1
+\end{cases}$$</p>
+<p>Или для второго:</p>
+<p>$$\begin{cases}
+&amp;{\theta}_0 = -\pi\  \tag{2}
+&amp;r_0 = x_2
+\end{cases}$$</p>
+<p>Исключая из полученной системы производную по $t$, можно перейти к следующему уравнению:</p>
+<p>$$
+\dfrac{dr}{d \theta} = \dfrac{r}{\sqrt{29.25}}
+$$</p>
+<p>Начальные условия остаются. Решив это уравнение, мы получим траекторию движения катера в полярных координатах.</p>
+<h2 id="-">Поиск точки пересечения</h2>
+<p>Найдем точку пересечения траектории катера и лодки. Для этого нам нужно аналитическое решение дифф. ур., задающего траекторию движения катера.</p>
+<p>Мы будем предпологать, что угол, под которым двигается лодка, будет $\dfrac{3 \pi}{4}$. Так как уравнение прямой задано через тангенс, а тангенс этого угла отрицательный, то для 1 случая подставим угол $\dfrac{7 \pi}{4}$, а для 2 - $- \dfrac{ \pi}{4}$</p>
+<p>$$
+r = \frac{41}{13} e^{\frac{1}{\sqrt{29.25}} \theta} \text{ -- для сл (1)}
+$$</p>
+<p>$$
+r = \frac{41}{9} e^{(5 \pi \frac{\sqrt{299}}{299} + \frac{1}{\sqrt{29.25}}) \theta}  \text{ -- для сл (2)}
+$$</p>
+<p>В результате получим, что точки пересечения равны $( \dfrac{7 \pi}{4}, 8.71603045939847)$ - при условии (1) и $(-\dfrac{\pi}{4}, 9.772206533910413)$ при условии (2).</p>
+<h2 id="-">Построение траектории</h2>
+<p>Построим траекторию движения катера и лодки для двух случаев. Далее приведён код на языке Julia, решающий задачу:</p>
+<pre><code class="lang-Julia">using Plots <span class="hljs-meta">#подключаем необходимые библеотеки</span>
+using OrdinaryDiffEq <span class="hljs-meta">#подключаем необходимые библеотеки</span>
+s = <span class="hljs-number">20.5</span> <span class="hljs-meta">#раст от лодки охраны до катера</span>
+fi = <span class="hljs-number">3</span>*<span class="hljs-built_in">pi</span>/<span class="hljs-number">4</span>
+tetha1 = (<span class="hljs-number">0.0</span>,<span class="hljs-number">2</span>*<span class="hljs-built_in">pi</span>)
+tetha2 = (-<span class="hljs-built_in">pi</span>,<span class="hljs-built_in">pi</span>)
+
+
+sl_1 = <span class="hljs-number">2</span>s/<span class="hljs-number">13</span> <span class="hljs-meta">#нач услов в 1 случае</span>
+sl_2 = <span class="hljs-number">2</span>s/<span class="hljs-number">9</span> <span class="hljs-meta">#нач услов во 2 случае</span>
+f(u,p,t) = u/<span class="hljs-built_in">sqrt</span>(<span class="hljs-number">29.25</span>) <span class="hljs-meta">#функция движения катера береговой охраны</span>
+f2(t) = <span class="hljs-built_in">tan</span>(fi)*t <span class="hljs-meta">#функция движения лодки </span>
+
+<span class="hljs-meta">#решение задачи в случ 1</span>
+sl1=ODEProblem(f, sl_1, tetha1)
+sol1 = solve(sl1, Tsit5(), saveat=<span class="hljs-number">0.01</span>) 
+
+<span class="hljs-meta">#решение задачи в случ 2</span>
+sl2=ODEProblem(f, sl_2, tetha2)
+sol2 = solve(sl2, Tsit5(), saveat=<span class="hljs-number">0.01</span>) 
+
+
+<span class="hljs-meta">#точка пересечения для первого случая</span>
+t = <span class="hljs-number">0</span>:<span class="hljs-number">0.01</span>:<span class="hljs-number">15</span>
+solution1(t) = (sl_1)*<span class="hljs-built_in">exp</span>(<span class="hljs-number">1</span>/<span class="hljs-built_in">sqrt</span>(<span class="hljs-number">29.25</span>)*t) 
+intersection_r1 = solution1(<span class="hljs-number">7</span>*<span class="hljs-built_in">pi</span>/<span class="hljs-number">4</span>) 
+
+<span class="hljs-meta">#построение графика для первого случая</span>
+<span class="hljs-meta">#график движения катера</span>
+<span class="hljs-keyword">plot</span>(sol1.t, sol1.u,
+proj=:<span class="hljs-built_in">polar</span>,
+lims=(<span class="hljs-number">0</span>,<span class="hljs-number">13</span>)
+)
+<span class="hljs-meta">#график движения лодки</span>
+<span class="hljs-keyword">plot</span>!(fill(fi,length(t)), f2.(t))
+
+
+
+<span class="hljs-meta">#точка пересечения для второго случая</span>
+solution2(t) = (sl_2)*<span class="hljs-built_in">exp</span>(<span class="hljs-number">5</span>*<span class="hljs-built_in">pi</span>*<span class="hljs-built_in">sqrt</span>(<span class="hljs-number">299</span>)/<span class="hljs-number">299</span>)*<span class="hljs-built_in">exp</span>(<span class="hljs-number">1</span>/<span class="hljs-built_in">sqrt</span>(<span class="hljs-number">29.25</span>)*t) 
+intersection_r2 = solution2(-<span class="hljs-built_in">pi</span>/<span class="hljs-number">4</span>)
+
+<span class="hljs-meta">#построение графика для второго случая</span>
+<span class="hljs-meta">#график движения катера</span>
+<span class="hljs-keyword">plot</span>(sol2.t, sol2.u,
+proj=:<span class="hljs-built_in">polar</span>,
+lims=(<span class="hljs-number">0</span>,<span class="hljs-number">13</span>)
+)
+<span class="hljs-meta">#график движения лодки</span>
+<span class="hljs-keyword">plot</span>!(fill(fi,length(t)), f2.(t))
+</code></pre>
+<p>В результате получим следующие графики (рис. @fig:001, @fig:002, @fig:003). И следующие точки пересения.</p>
+<p><img src="https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab2/img/lab2.1.png" alt="График движения для сл. 1">{#fig:001 width=70%}</p>
+<p><img src="https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab2/img/lab2.2.png" alt="График движения для сл. 2">{#fig:002 width=70%}</p>
+<p>Точки пересечения равны $( \dfrac{7 \pi}{4}, 8.71603045939847)$ - при условии (1) и $(-\dfrac{\pi}{4}, 9.772206533910413)$ при условии (2).</p>
+<h1 id="-vscode">Код выполнения этой лаб работы в VSCode</h1>
+<p><img src="https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab2/img/lab2.code.png" alt="Код всей лаб работы">{#fig:003 width=70%}</p>
+<h1 id="-">Выводы</h1>
+<p>Построили математическую модель для выбора правильной стратегии при решении примера задачи поиска.
+Нарисовали графики движения для двух случаев и нашли точки пересечения , согласно методическому материалу.</p>
+<h1 id="-">Список литературы</h1>
+<ol>
+<li>Кривая погони [Электронный ресурс]. Wikimedia Foundation, Inc., 2024. URL: <a href="https://ru.wikipedia.org/wiki/Git">https://ru.wikipedia.org/wiki/Git</a>.</li>
+</ol>
+</body></html>
