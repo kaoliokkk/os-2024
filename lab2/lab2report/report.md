@@ -253,5 +253,4 @@ plot!(fill(fi,length(t)), f2.(t))
 
 # Список литературы{.unnumbered}
 
-::: {#refs}
 :::
