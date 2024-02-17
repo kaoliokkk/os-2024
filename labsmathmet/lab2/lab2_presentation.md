@@ -47,12 +47,14 @@ $A$.
 
 ## Материалы и методы
 Язык программирования:
-  -Julia
+
+Julia
 
 
 Библеотеки:
-  -OrdinaryDiffEq
-  -Plots
+
+OrdinaryDiffEq
+Plots
 
 # Выполнение лабораторной работы
 
