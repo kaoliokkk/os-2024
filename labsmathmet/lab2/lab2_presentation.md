@@ -53,8 +53,7 @@ Julia
 
 Библеотеки:
 
-OrdinaryDiffEq
-Plots
+OrdinaryDiffEq,Plots
 
 # Выполнение лабораторной работы
 
