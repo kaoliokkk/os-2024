@@ -212,13 +212,13 @@ solution1(t) = (sl_1)*exp(1/sqrt(29.25)*t)
 intersection_r1 = solution1(7*pi/4) 
 
 #построение графика для первого случая
-#график движения лодки
-plot!(fill(fi,length(t)), f2.(t))
 #график движения катера
 plot(sol1.t, sol1.u,
 proj=:polar,
 lims=(0,13)
 )
+#график движения лодки
+plot!(fill(fi,length(t)), f2.(t))
 
 
 
@@ -227,13 +227,14 @@ solution2(t) = (sl_2)*exp(5*pi*sqrt(299)/299)*exp(1/sqrt(29.25)*t)
 intersection_r2 = solution2(-pi/4)
 
 #построение графика для второго случая
-#график движения лодки
-plot!(fill(fi,length(t)), f2.(t))
 #график движения катера
 plot(sol2.t, sol2.u,
 proj=:polar,
 lims=(0,13)
 )
+#график движения лодки
+plot!(fill(fi,length(t)), f2.(t))
+
 ```
 
 В результате получим следующие графики (рис. @fig:001, @fig:002). И следующие точки пересения.
