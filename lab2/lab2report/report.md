@@ -240,9 +240,9 @@ plot!(fill(fi,length(t)), f2.(t))
 
 В результате получим следующие графики (рис. @fig:001, @fig:002). И следующие точки пересения.
 
-![График движения для сл. 1](image/1.png){#fig:001 width=70%}
+![График движения для сл. 1](https://github.com/kaoliokkk/os-2024/blob/master/lab2/lab2report/img/lab2.1.png){#fig:001 width=70%}
 
-![График движения для сл. 2](image/2.png){#fig:002 width=70%}
+![График движения для сл. 2](https://github.com/kaoliokkk/os-2024/blob/master/lab2/lab2report/img/lab2.2.png){#fig:002 width=70%}
 
 Точки пересечения равны $( \dfrac{7 \pi}{4}, 8.71603045939847)$ - при условии (1) и $(-\dfrac{\pi}{4}, 9.772206533910413)$ при условии (2).
 
