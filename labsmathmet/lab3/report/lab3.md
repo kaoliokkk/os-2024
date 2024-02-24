@@ -245,7 +245,12 @@ end lab3;
 ![График численности армии для сл. 1](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_om1.png){#fig:001 width=70%}
 
 ![График численности армии для сл. 2](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_om2.png){#fig:002 width=70%}
+
 # Выводы
+
+
+
+
 В двух случаях побеждает армия y. Мы узнали как строить начальную аналитическую модель для модели боевых действий. Для этого использовали Julia и Openmodelica.
 Сделали выводы опираясь на графики описаные в этих приложениях.
 
