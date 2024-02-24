@@ -1,7 +1,7 @@
 ---
 ## Front matter
 title: "Лабораторная работа №3"
-subtitle: "Модель боевых действий"
+subtitle: "Модель Ланчестера."
 author: "Морозов Михаил Евгеньевич"
 
 ## Generic otions
