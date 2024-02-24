@@ -239,5 +239,5 @@ end lab3;
 
 # Список литературы
 
-1. Кривая погони [Электронный ресурс]. Wikimedia Foundation, Inc., 2024. URL: https://ru.wikipedia.org/wiki/Git.
+1. Законы_Осипова — Ланчестера. [Электронный ресурс]. Wikimedia Foundation, Inc., 2024. URL: https://ru.wikipedia.org/wiki/Законы_Осипова_—_Ланчестера.
 :::
