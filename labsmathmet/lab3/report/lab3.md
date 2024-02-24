@@ -177,9 +177,9 @@ plot(sol2,title = "Модель 2",
 
 В результате получим следующие графики (рис. @fig:001, @fig:002).
 
-![График движения для сл. 1](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab2/img/lab2.1.png){#fig:001 width=70%}
+![График численности армии для сл. 1](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_jul1.png){#fig:001 width=70%}
 
-![График движения для сл. 2](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab2/img/lab2.2.png){#fig:002 width=70%}
+![График численности армии для сл. 2](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_jul2.png){#fig:002 width=70%}
 
 ##Код в OpenModelica
 Также построим эти графики в OpenModelica.
@@ -228,11 +228,11 @@ equation
 end lab3;
 ```
 
-В результате получим следующие графики (рис. @fig:001, @fig:002).
+В результате получим следующие графики (рис. @fig:003, @fig:004).
 
-![График движения для сл. 1](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab2/img/lab2.1.png){#fig:001 width=70%}
+![График численности армии для сл. 1](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_om1.png){#fig:001 width=70%}
 
-![График движения для сл. 2](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab2/img/lab2.2.png){#fig:002 width=70%}
+![График численности армии для сл. 2](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_om2.png){#fig:002 width=70%}
 # Выводы
 В двух случаях побеждает армия y. Мы узнали как строить начальную аналитическую модель для модели боевых действий. Для этого использовали Julia и Openmodelica.
 Сделали выводы опираясь на графики описаные в этих приложениях.
