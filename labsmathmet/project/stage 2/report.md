@@ -1,7 +1,7 @@
 ---
 ## Front matter
 title: "Групповой проект. Тема: Рост дендритов"
-subtitle: "Этап 1"
+subtitle: "Этап 2"
 author: 
 	- Артамонов Тимофей Евгеньевич 
 	- Федорина Эрнест Васильевич
@@ -72,6 +72,8 @@ header-includes:
   - \usepackage{float} # keep figures where there are in the text
   - \floatplacement{figure}{H} # keep figures where there are in the text
 ---
+# Введение
+Надо написать что нужно сделать на этом этапе так как вообще не понятно к чему приведены эти этапы типа ))) Этапы чего ?))) В 
 
 # Этап 1: Инициализация параметров симуляции
 
