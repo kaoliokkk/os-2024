@@ -182,9 +182,19 @@ plot(sol3, vars = (2, 1)) #Фазовый портрет
 
 В результате получим следующие графики (рис. @fig:001, @fig:002, @fig:003, @fig:004, @fig:005, @fig:006).
 
-![График численности армии для сл. 1](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_jul1.png){#fig:001 width=70%}
+![Колебания гарм осц сл. 1](allfiles/lab4_jl_1.1){#fig:001 width=70%}
+![Фаз портрет сл. 1](allfiles/lab4_jl_1.2){#fig:002 width=70%}
 
-![График численности армии для сл. 2](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_jul2.png){#fig:002 width=70%}
+
+
+![Колебания гарм осц сл. 2](allfiles/lab4_jl_2.1){#fig:003 width=70%}
+![Фаз портрет сл. 2](allfiles/lab4_jl_2.2){#fig:004 width=70%}
+
+
+
+
+![Колебания гарм осц сл. 3](allfiles/lab4_jl_3.1){#fig:005 width=70%}
+![Фаз портрет сл. 3](allfiles/lab4_jl_3.2){#fig:006 width=70%}
 
 ##Код в OpenModelica
 Также построим эти графики в OpenModelica.
@@ -248,9 +258,19 @@ end lab4;
 
 В результате получим следующие графики (рис. @fig:007, @fig:008, @fig:009, @fig:0010, @fig:011, @fig:012).
 
-![График численности армии для сл. 1](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_om1.png){#fig:001 width=70%}
+![Колебания гарм осц сл. 1](allfiles/lab4_om_1.1){#fig:007 width=70%}
+![Фаз портрет сл. 1](allfiles/lab4_om_1.2){#fig:008 width=70%}
 
-![График численности армии для сл. 2](https://github.com/kaoliokkk/os-2024/blob/master/labsmathmet/lab3/report/img/l3_om2.png){#fig:002 width=70%}
+
+
+![Колебания гарм осц сл. 2](allfiles/lab4_om_2.1){#fig:009 width=70%}
+![Фаз портрет сл. 2](allfiles/lab4_om_2.2){#fig:0010 width=70%}
+
+
+
+
+![Колебания гарм осц сл. 3](allfiles/lab4_om_3.1){#fig:011 width=70%}
+![Фаз портрет сл. 3](allfiles/lab4_om_3.2){#fig:012 width=70%}
 
 # Выводы
 
