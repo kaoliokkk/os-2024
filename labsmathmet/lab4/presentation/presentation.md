@@ -129,18 +129,22 @@ plot(sol3, vars = (2, 1)) #Фазовый портрет
 
 В результате получим следующие графики (рис. @fig:001, @fig:002, @fig:003, @fig:004, @fig:005, @fig:006).
 
+#
 ![Колебания гарм осц сл. 1](allfiles/lab4_jl_1.1.png){#fig:001 width=70%}
+#
 ![Фаз портрет сл. 1](allfiles/lab4_jl_1.2.png){#fig:002 width=70%}
 
 
-
+#
 ![Колебания гарм осц сл. 2](allfiles/lab4_jl_2.1.png){#fig:003 width=70%}
+#
 ![Фаз портрет сл. 2](allfiles/lab4_jl_2.2.png){#fig:004 width=70%}
 
 
 
-
+#
 ![Колебания гарм осц сл. 3](allfiles/lab4_jl_3.1.png){#fig:005 width=70%}
+#
 ![Фаз портрет сл. 3](allfiles/lab4_jl_3.2.png){#fig:006 width=70%}
 
 ##Код в OpenModelica
@@ -205,18 +209,22 @@ end lab4;
 
 В результате получим следующие графики (рис. @fig:007, @fig:008, @fig:009, @fig:0010, @fig:011, @fig:012).
 
+#
 ![Колебания гарм осц сл. 1](allfiles/lab4_om_1.1.png){#fig:007 width=70%}
+#
 ![Фаз портрет сл. 1](allfiles/lab4_om_1.2.png){#fig:008 width=70%}
 
 
-
+#
 ![Колебания гарм осц сл. 2](allfiles/lab4_om_2.1.png){#fig:009 width=70%}
+#
 ![Фаз портрет сл. 2](allfiles/lab4_om_2.2.png){#fig:0010 width=70%}
 
 
 
-
+#
 ![Колебания гарм осц сл. 3](allfiles/lab4_om_3.1.png){#fig:011 width=70%}
+#
 ![Фаз портрет сл. 3](allfiles/lab4_om_3.2.png){#fig:012 width=70%}
 
 # Выводы
