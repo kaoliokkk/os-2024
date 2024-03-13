@@ -192,7 +192,7 @@ end
 plot(heatmap(n), title = "Кристаллизация", color = :blues)
 ```
 
-![plot](image/1.png){ #fig:001 width=70%}
+![plot](image/1.jpg){ #fig:001 width=70%}
 
 
 
