@@ -65,6 +65,7 @@ header-includes:
   - \usepackage{float} # keep figures where there are in the text
   - \floatplacement{figure}{H} # keep figures where there are in the text
 ---
+
 # Вводная часть
 ## Цель работы
 
