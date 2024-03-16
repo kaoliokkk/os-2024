@@ -166,7 +166,7 @@ plot(sol2,title = "I(t) > I*")
 ```
 ## Код на Open Modelica
 
-$$Код$ $для$ $двух$ $случаев$ $на$ $Open$ $Modelica$$
+$$$Код$ $для$ $двух$ $случаев$ $на$ $Open$ $Modelica$$$
 ### Код для первого случая
 
 ```OpenModelica
