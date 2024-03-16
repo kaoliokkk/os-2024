@@ -2,7 +2,7 @@
 ## Front matter
 title: "Отчёт по лабораторной работе №6"
 subtitle: "Задача об эпидемии"
-author: "Артамонов Тимофей Евгеньевич"
+author: "Морозов Михаил Евгеньевич"
 
 ## Generic otions
 lang: ru-RU
@@ -117,123 +117,107 @@ $\frac{dR}{dt} = \beta I$
 
 # Постановка задачи
 
-На одном острове вспыхнула эпидемия. Известно, что из всех проживающих на острове (N = 12 200) в момент начала эпидемии (t=0) число заболевших людей
-(являющихся распространителями инфекции) I(0) = 130, А число здоровых людей с иммунитетом к болезни R(0) = 53. Таким образом, число людей восприимчивых к
-болезни, но пока здоровых, в начальный момент времени S(0) = N - I(0) - R(0).
+На одном острове вспыхнула эпидемия. Известно, что из всех проживающих на острове $(N=11 456)$ в момент начала эпидемии $(t=0)$ число заболевших людей (являющихся распространителями инфекции) $I(0)=97$, А число здоровых людей с иммунитетом к болезни $R(0)=37$. Таким образом, число людей восприимчивых к болезни, но пока здоровых, в начальный момент времени $S(0)=N-I(0)- R(0)$.
 
 # Задание 
-
 Постройте графики изменения числа особей в каждой из трех групп. Рассмотрите, как будет протекать эпидемия в случае:
-1) если I(0) > I*
-2) если I(0) <= I*
+$$1)если I(0)<=I*$$ 
+$$2)если I(0)>I*$$
 
 # Выполнение лабораторной работы
+## Код на julia
+Выполнение лабораторной работе на языке julia
 
-Написали код на Julia:
 ```julia
+using Plots
+using DifferentialEquations
+using OrdinaryDiffEq
 
-using DifferentialEquations, Plots, OrdinaryDiffEq
-
-#Функция описывающая изменения каждой группы, когда I(0) <= I* 
-function noncrit!(du, u, p, t)
-    a, b = p
+#функция для I(0)<=I*
+function nocr(du,u,p,t)
+    a,b = p
     du[1] = 0
     du[2] = -b*u[2]
     du[3] = b*u[2]
 end
 
-#Функция описывающая изменения каждой группы, когда I(0) > I* 
-function crit!(du, u, p, t)
-    a, b = p
+#функция для I(0) > I*
+function crit(du,u,p,t)
+    a,b = p
     du[1] = -a*u[1]
-    du[2] = a*u[1] - b*u[2]
+    du[2] = a*u[1]-b*u[2]
     du[3] = b*u[2]
 end
 
 #Начальные условия
-N = 12200
-p = [0.01, 0.02]
-x0 = [N-130-53, 53, 130]
-tspan = (0, 1000)
+N = 11456
+p = [0.01,0.02]
+x0 = [N-97-37,37,97]
+tspan = (0,1000)
 
+prob1 = ODEProblem(nocr,x0,tspan,p)
+prob2 = ODEProblem(crit,x0,tspan,p)
 
-prob1 = ODEProblem(noncrit!, x0, tspan, p)
-prob2 = ODEProblem(crit!, x0, tspan, p)
+sol1 = solve(prob1,Tsit5(),dtmax = 0.05)
+sol2 = solve(prob2,Tsit5(),dtmax = 0.05)
 
-sol1 = solve(prob1, Tsit5(), dtmax = 0.05)
-sol2 = solve(prob2, Tsit5(), dtmax = 0.05)
-
-plot(sol1, title = "I(t) <= I*")
-plot(sol2, title = "I(t) > I*")
+plot(sol1,title = "I(t)<=I*")
+plot(sol2,title = "I(t) > I*")
 ```
+## Код на Open Modelica
 
-Записали 2 случая на языке OpenModelica 
-```
-model lab6
+$$Код для двух случаев на Open Modelica$$
+### Код для первого случая
 
-parameter Real a = 0.01;
-parameter Real b = 0.02;
-
-Real S(start = 12200-130-53);
-Real I(start = 130);
-Real R(start = 53);
-
-equation
-  der(S) = 0;
-  der(I) = -b*I;
-  der(R) = b*I;
-
-  
-end lab6;
-```
-```
+```OpenModelica
 model lab6
 
 parameter Real a = 0.01;
 parameter Real b = 0.02;
 
 
-Real S(start = 12200-130-53);
-Real I(start = 130);
-Real R(start = 53);
+Real S(start = 11456-97-37);
+Real I(start = 97);
+Real R(start = 37);
 
 equation
-  der(S) = -a*S;
-  der(I) = a*S - b*I;
-  der(R) = b*I;
+  der(S)= 0;
+  der(I)= -b*I;  
+  der(R)= b*I;
 
-  
 end lab6;
 ```
 
-и получили следующие результаты.
+### Код для второго случая
+```OpenModelica
+model lab6
 
-Построили график изменения групп S, I, R когда I(0) <= I* на Julia. (рис. [-@fig:001])
-
-![Julia Plot 1](image/Julia1.PNG){#fig:001 width=70%}
-
-Построили график на OpenModelica, графики одинаковые (рис. [-@fig:002])
-
-![OM Plot 1](image/OM2.PNG){#fig:002 width=70%}
-
-Можно построить отдельно I и R, чтобы лучше понять, что происходит. (рис. [-@fig:003])
-
-![OM Plot 2](image/OM1.PNG){#fig:003 width=70%}
-
-Построили график изменения групп S, I, R когда I(0) > I* на Julia. (рис. [-@fig:004])
-Видно, что постепенно все люди заболевают, впоследствие приобретая иммунитет.
-
-![Julia Plot 2](image/Julia2.PNG){#fig:004 width=70%}
-
-Построили такой же график в OpenModelica (рис. [-@fig:005])
-
-![OM Plot 3](image/OM3.PNG){#fig:005 width=70%}
+parameter Real a = 0.01;
+parameter Real b = 0.02;
 
 
+Real S(start = 11456-97-37);
+Real I(start = 97);
+Real R(start = 37);
+
+equation
+  der(S)= -a*S;
+  der(I)= a*S-b*I;  
+  der(R)= b*I;
+
+end lab6;
+```
+## Результаты работы кода 
+## Julia сл.1
+![Результат сл1 Julia](ljl1.png){ #fig:001 width=70% }
+## Open Modelica сл.1
+![Результат сл1 OM](om61.png){ #fig:002 width=70% }
+## Julia сл.2
+![Результат сл2 Julia](ljl2.png){ #fig:003 width=70% }
+## Open Modelica сл.2
+![Результат сл2 OM](om62.png){ #fig:004 width=70% }
 # Выводы
-
-- Построили графики изменения численности групп S, I, R для 2 случаев
-- Сравнили результаты на Julia и OpenModelica.
+В результате выполнения лабораторной работы я узнал как строить простейшую модель об эпидемии. Выполнил мат. модель для двух случаев в Julia и Open Modelica и получил результаты.
 
 # Список литературы{.unnumbered}
 
