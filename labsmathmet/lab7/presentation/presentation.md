@@ -176,22 +176,22 @@ end lab7;
 ```
 
 ## Julia сл.1
-![Результат сл1 Julia](jl1.png){ #fig:001 width=70% }
+![Результат сл1 Julia](image/jl1.png){ #fig:001 width=70% }
 
 ## Julia сл.2
-![Результат сл2 Julia](jl2.png){ #fig:002 width=70% }
+![Результат сл2 Julia](image/jl2.png){ #fig:002 width=70% }
 
 ## Julia сл.3
-![Результат сл3 Julia](jl3.png){ #fig:003 width=70% }
+![Результат сл3 Julia](image/jl3.png){ #fig:003 width=70% }
 
 ## OM сл.1
-![Результат сл1 OM](om1.png){ #fig:004 width=70% }
+![Результат сл1 OM](image/om1.png){ #fig:004 width=70% }
 
 ## OM сл.2
-![Результат сл2 OM](om2.png){ #fig:005 width=70% }
+![Результат сл2 OM](image/om2.png){ #fig:005 width=70% }
 
 ## OM сл.3
-![Результат сл3 OM](om3.png){ #fig:006 width=70% }
+![Результат сл3 OM](image/om3.png){ #fig:006 width=70% }
 
 # Выводы
 Мы изучили математическую модель по эффективности рекламы. Сделали код в Julia и OpenModelica для этой модели, а также проанализировали результаты.
