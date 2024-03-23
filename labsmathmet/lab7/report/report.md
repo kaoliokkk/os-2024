@@ -2,7 +2,7 @@
 ## Front matter
 title: "Отчёт по лабораторной работе №7"
 subtitle: "Эффективность рекламы"
-author: "Артамонов Тимофей Евгеньевич"
+author: "Морозов Михаил Евгеньевич"
 
 ## Generic otions
 lang: ru-RU
@@ -119,138 +119,20 @@ $$
 
 Даны 3 уравнения распространения рекламы:
 
-1. $$\frac{dn}{dt} = (0.74 + 0.000074 n(t)) (N - n(t))$$
-2. $$\frac{dn}{dt} = (0.000074 + 0.74 n(t)) (N - n(t))$$
-3. $$\frac{dn}{dt} = (0.74 \sin(t) + 0.74 \cos(t) n) (N - n(t))$$
+1. $$\frac{dn}{dt} = (0.658 + 0.000081 n(t)) (N - n(t))$$
+2. $$\frac{dn}{dt} = (0.000085 + 0.23 n(t)) (N - n(t))$$
+3. $$\frac{dn}{dt} = (0.85 \sin(t) + 0.83 \cos(3t) n) (N - n(t))$$
 
 # Задание 
-
-Постройте график распространения рекламы, описанные данными уравнениями. При этом объем аудитории $N = 1060$, в начальный момент о товаре знает 7 человек.
+Постройте график распространения рекламы. При этом объем аудитории $N=1024$ , в начальный момент о товаре знает $7$ человек. Для случая 2 определите в какой момент времени скорость распространения рекламы будет иметь максимальное значение.
 
 # Выполнение лабораторной работы
-
-Написали код на Julia:
-```julia
-
-using DifferentialEquations, Plots
-#Уравнение 1
-promotion1(n, p, t) = (0.74 + 0.000074*n)*(p - n)
-#Уравнение 2
-promotion2(n, p, t) = (0.000074 + 0.74*n)*(p - n)
-#Уравнение 3
-promotion3(n, p, t) = (0.74*sin(t) + 0.74*cos(t)*n)*(p - n)
-
-# Параметры и условия
-p = 1060 # N - количество потенциальных клиентов
-x0 = 7 # n - количество людей, знающих о продукции
-tspan1 = (0, 10) # Временной промежуток для первого уравнения
-tspan2 = (0, 0.02) # Временной промежуток для второго и третьего уравнений
-
-# Решение уравнений для 3 случаев
-
-prob1 = ODEProblem(promotion1, x0, tspan1, p)
-sol1 = solve(prob1, Tsit5(), dtmax = 0.05)
-
-prob2 = ODEProblem(promotion2, x0, tspan2, p)
-sol2 = solve(prob2, Tsit5(), dtmax = 0.05)
-
-prob3 = ODEProblem(promotion3, x0, tspan2, p)
-sol3 = solve(prob3, Tsit5(), dtmax = 0.05)
-
-# Графики решений
-#plot(sol1, title = "Случай a1(t) >> a2(t)")
-#plot(sol2, title = "Случай a1(t) << a2(t)")
-plot(sol3, title = "Случай c непостоянными a1 и a2")
-```
-
-Записали 3 случая на языке OpenModelica 
-Случай 1
-```
-model lab7
-
-parameter Real a = 0.74;
-parameter Real b = 0.000074;
-parameter Real c = 1060;
-
-Real A(start = 7);
+Следуя методическим материалам мы выполнили задание и написали код на julia и на OpenModelica и получили графики как результат работы кода.
 
 
-equation
-  der(A) = (a + b*A)*(c - A);
-  
-  
-end lab7;
-
-```
-Случай 2
-```
-model lab7
-
-parameter Real a = 0.74;
-parameter Real b = 0.000074;
-parameter Real c = 1060;
-
-Real B(start = 7);
-
-
-equation
-  der(B) = (b + a*B)*(c - B);
-  
-  
-end lab7;
-```
-Случай 3
-```
-model lab7
-
-parameter Real a = 0.74;
-parameter Real b = 0.000074;
-parameter Real c = 1060;
-Real p;
-Real q;
-
-Real C(start = 7);
-
-
-equation
-  der(C) = (a*p + a*q*C)*(c - C);
-  p = sin(time);
-  q = cos(time);
-  
-end lab7;
-```
-
-
-и получили следующие результаты.
-
-Построили график распространения рекламы, когда $\alpha_1(t) >> \alpha_2(t)$ на Julia. (рис. [-@fig:001])
-
-![Julia Plot 1](image/julia1.PNG){#fig:001 width=70%}
-
-Построили график на OpenModelica, графики одинаковые (рис. [-@fig:002])
-
-![OM Plot 1](image/OM1.PNG){#fig:002 width=70%}
-
-Построили график распространения рекламы, когда $\alpha_1(t) << \alpha_2(t)$ на Julia. (рис. [-@fig:003])
-
-![Julia Plot 2](image/julia2.PNG){#fig:003 width=70%}
-
-Построили такой же график в OpenModelica. Графики совпадают. (рис. [-@fig:004])
-
-![OM Plot 2](image/OM2.PNG){#fig:004 width=70%}
-
-Построили график распространения рекламы, когда $\alpha_1(t)$ и  $\alpha_2(t)$ имеют синусоидальную и косинусоидальную зависимости от времени на Julia. (рис. [-@fig:005])
-
-![Julia Plot 3](image/julia3.PNG){#fig:005 width=70%}
-
-Построили такой же график в OpenModelica. Графики совпадают. (рис. [-@fig:006])
-
-![OM Plot 3](image/OM3.PNG){#fig:006 width=70%}
 
 # Выводы
 
-- Построили графики распространения рекламы для 3 случаев
-- Сравнили результаты на Julia и OpenModelica.
 
 # Список литературы{.unnumbered}
 
