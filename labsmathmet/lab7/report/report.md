@@ -126,13 +126,91 @@ $$
 # Задание 
 Постройте график распространения рекламы. При этом объем аудитории $N=1024$ , в начальный момент о товаре знает $7$ человек. Для случая 2 определите в какой момент времени скорость распространения рекламы будет иметь максимальное значение.
 
-# Выполнение лабораторной работы
+# Основная часть
+## Выполнение лабораторной работы
 Следуя методическим материалам мы выполнили задание и написали код на julia и на OpenModelica и получили графики как результат работы кода.
+```julia
+using Plots
+using DifferentialEquations
 
+#Начальные условия
+p=1024 #N-колличество потенциальных покупателей
+x0=7 #колличество клиентов знающих о продукции
 
+#Уравнение 1
+promote1(n,p,t) = (0.658 + 0.00081*n)*(p - n)
+
+#Уравнение 2
+promote2(n,p,t) = (0.000085 + 0.23*n)*(p - n)
+
+#Уравнение 3
+promote3(n,p,t) = (0.85*sin(t) + 0.83*cos(3*t)*n)*(p - n)
+
+tspan1 = (0,10) #для первого
+tspan2 = (0,0.02) #для второго и третьего
+
+prob1 = ODEProblem(promote1,x0,tspan1,p) 
+sol1 = solve(prob1,Tsit5(),dtmax=0.05)
+
+prob2 = ODEProblem(promote2,x0,tspan2,p) 
+sol2 =  solve(prob2,Tsit5(),dtmax=0.05)
+
+prob3 = ODEProblem(promote3,x0,tspan2,p) 
+sol3 =  solve(prob3,Tsit5(),dtmax=0.05)
+
+#Графики решений
+plot(sol1,title = "a1(t) >> a2(t)")
+
+plot(sol2,title = "a1(t) << a2(t)")
+
+plot(sol3,title = "Непостоянные a1 и a2")
+```
+## Выполнение лабораторной работы
+Далее демонстрация кода на OpenModelica.
+
+```OpenModelica
+3 случай
+ model lab7
+
+parameter Real a = 0.85;
+
+parameter Real b = 0.83;
+
+parameter Real c = 1024;
+
+Real p;
+Real q;
+
+Real C(start = 7);
+
+equation
+  der(C) = (a*p+b*3*q*C)*(c-C);
+  p = sin(time);
+  q = cos(time);
+
+end lab7;
+```
+
+## Julia сл.1
+![Результат сл1 Julia](jl1.png){ #fig:001 width=70% }
+
+## Julia сл.2
+![Результат сл2 Julia](jl2.png){ #fig:002 width=70% }
+
+## Julia сл.3
+![Результат сл3 Julia](jl3.png){ #fig:003 width=70% }
+
+## OM сл.1
+![Результат сл1 OM](om1.png){ #fig:004 width=70% }
+
+## OM сл.2
+![Результат сл2 OM](om2.png){ #fig:005 width=70% }
+
+## OM сл.3
+![Результат сл3 OM](om3.png){ #fig:006 width=70% }
 
 # Выводы
-
+Мы изучили математическую модель по эффективности рекламы. Сделали код в Julia и OpenModelica для этой модели, а также проаанлизировали результаты.
 
 # Список литературы{.unnumbered}
 
