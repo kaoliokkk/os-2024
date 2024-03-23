@@ -79,12 +79,12 @@ header-includes:
 :::::::::::::: {.columns align=center}
 ::: {.column width="50%"}
 
-![plot](image/1.png){ #fig:001 width=70%}
+![plot](image/jl1.png){ #fig:001 width=70%}
 
 :::
 ::: {.column width="50%"}
 
-![plot2](image/2.png){ #fig:002 width=70%}
+![plot2](image/jl2.png){ #fig:002 width=70%}
 
 :::
 ::::::::::::::
