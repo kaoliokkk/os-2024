@@ -78,15 +78,15 @@ The main objective of this research is to give an overview of the main methods f
 
 As part of this goal, we have set the following objectives:
 
-1.To study the basic principles of queueing systems with this strategy.
+1.Examine the basic principles of queueing systems using this strategy.
 
-2.To analyze existing approaches and methods of solving problems of queueing systems.
+2.Analyze existing approaches and methods for solving queueing systems problems.
 
-3.Analyze examples of successful application of this strategy in various fields of activity. 3.
+3.Analyze examples of successful application of this strategy in various fields of activity. 
 
-4.To evaluate the advantages and limitations of the strategy and its impact on the quality of customer service.
+4.Evaluate the benefits and limitations of the strategy and its impact on the quality of customer service.
 
-5.Examine current trends and innovative approaches to optimizing queueing systems using this strategy.
+5.Explore current trends and innovative approaches to optimizing queuing systems using this strategy.
 
 ## Research Relevance
 
