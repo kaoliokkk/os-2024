@@ -67,28 +67,28 @@ header-includes:
 ---
 # Introduction 
 
-Modern living and business conditions pose a challenge for enterprises to efficiently serve customers amidst limited resources and increasing competition. Queueing systems with Join the Shortest Queue strategy, also known as "Join the shortest queue", represent a significant area of research in probability theory, optimization, and service process management. In the context of queueing systems, this strategy is applied to minimize customer waiting time by selecting the shortest queue upon arrival for service.
+Today's living and business environments challenge enterprises to provide efficient customer service. Queueing systems with the Join the Shortest Queue strategy, is a research area in probability theory, optimization and service process management. In the context of queueing systems, this strategy is used to minimize customer waiting time by selecting the shortest queue upon arrival for service.
 
-In this research, we will describe the main methods for solving queueing system problems. We will examine both classical and modern approaches to modeling and analyzing such systems, as well as analyze their advantages and limitations.
+In this research paper we will describe the main methods of solving problems about queueing systems. We will consider both classical and modern approaches to modeling and analyzing such systems, as well as their advantages and limitations.
 
 
 ## Research Objectives and Tasks
 
-The aim of this research is to provide a comprehensive overview of the main methods for solving problems in queueing systems with Join the Shortest Queue strategy. 
+The main objective of this research is to give an overview of the main methods for solving problems in queueing systems with this strategy. 
 
-Within this aim, we set the following tasks:
+As part of this goal, we have set the following objectives:
 
-1.	Study the basic principles of operation of queueing systems with Join the Shortest Queue strategy and their mathematical modeling.
-2.	Analyze existing approaches and methods for solving queueing system problems using the Join the Shortest Queue strategy.
-3.	Examine examples of successful application of this strategy in various fields of activity.
-4.	Evaluate the advantages and limitations of the Join the Shortest Queue strategy and its impact on the quality of customer service.
-5.	Investigate current trends and innovative approaches to optimizing queueing systems using this strategy.
+1.To study the basic principles of queueing systems with this strategy.
+2.	To analyze existing approaches and methods of solving problems of queueing systems.
+3. Analyze examples of successful application of this strategy in various fields of activity. 3.
+4.To evaluate the advantages and limitations of the strategy and its impact on the quality of customer service.
+5.	Examine current trends and innovative approaches to optimizing queueing systems using this strategy.
 
 ## Research Relevance
 
-Research on queueing systems with Join the Shortest Queue strategy is highly relevant in the modern world. Efficient queue management plays a key role in ensuring customer satisfaction, optimizing business processes, and enhancing the competitiveness of enterprises.
+The study of queueing systems is highly relevant in today's world. Effective queue management plays a key role in ensuring customer satisfaction, optimizing business processes and enhancing the competitiveness of enterprises.
 
-In the rapidly evolving technological landscape and changing consumer preferences, constant improvement of methods and tools for managing queueing systems is necessary. Analysis and evaluation of the Join the Shortest Queue strategy allow us to draw conclusions that can be applicable in many industries and areas of activity.
+With the rapidly developing world and changing consumer preferences, continuous improvement of queue system management methods and tools is necessary. 
 
-Thus, this research is significant not only from an academic perspective but also from a practical standpoint, as its results can be utilized for service in various fields of activity, ultimately contributing to improved customer service quality and efficiency enhancement.
+Thus, this study is significant not only from a scientific, but also from a practical point of view, as its results can be used for service in various areas of activity, which will ultimately contribute to improving the quality of customer service and operational efficiency.
 
