@@ -5,7 +5,7 @@ subtitle: "Queueing systems with Join the Shortest Queue"
 author: "Morozov Mikhail Evgenievich"
 
 ## Generic otions
-lang: ru-RU
+lang: en-US
 toc-title: "Table of contents"
 
 ## Bibliography
@@ -23,14 +23,14 @@ papersize: a4
 documentclass: scrreprt
 ## I18n polyglossia
 polyglossia-lang:
-  name: russian
+  name: english
   options:
   - spelling=modern
   - babelshorthands=true
 polyglossia-otherlangs:
   name: english
 ## I18n babel
-babel-lang: russian
+babel-lang: english
 babel-otherlangs: english
 ## Fonts
 mainfont: PT Serif
@@ -65,3 +65,8 @@ header-includes:
   - \usepackage{float} # keep figures where there are in the text
   - \floatplacement{figure}{H} # keep figures where there are in the text
 ---
+# Introduction 
+
+## Research Objectives and Tasks
+
+## Research Relevance
