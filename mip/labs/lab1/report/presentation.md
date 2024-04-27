@@ -72,7 +72,7 @@ header-includes:
 ## Пример (рис. [-@fig:001])
 Переписываем код из примера следуя пунктам из методического материала и получаем 2 графика в xgraph.
 
-![Пример](image/lab2_example.png){#fig:001 width=70%}
+![Пример](img/lab2_example.png){#fig:001 width=70%}
 
 ## Этап 1.2
 – Измените в модели на узле s1 тип протокола TCP с Reno на NewReno, затем на 
@@ -89,15 +89,15 @@ Vegas. Сравните и поясните результаты.
 
 ## Vegas. (рис. [-@fig:003])
 
-![Vegas](lab2Vegas.png){#fig:003 width=70%}
+![Vegas](img/lab2Vegas.png){#fig:003 width=70%}
 
 ## Code. (рис. [-@fig:004])
 
-![Code1](codelab2.png){#fig:004 width=70%}
+![Code1](img/codelab2.png){#fig:004 width=70%}
 
 ## Code. (рис. [-@fig:005])
 
-![Code2](codelab22.png){#fig:005 width=70%}
+![Code2](img/codelab22.png){#fig:005 width=70%}
 
 # Выводы
 
