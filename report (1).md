@@ -125,7 +125,7 @@ The JSQ policy aims to minimize client wait times by directing new requests to t
 
 One major advantage is reduced client wait times. By directing requests to the shortest queues, the system minimizes the chances of long queues and overloads. JSQ also promotes an even load distribution among servers, increasing their longevity and reducing failure risks.
 
-However, there are disadvantages. Masahiro Kobayashi, Yutaka Sakuma, and Masakiyo Miyazawa in their study $“Join the shortest queue among k parallel queues: tail asymptotics of its stationary distribution”$ state that JSQ can be ineffective under high load variability. Frequent changes in queue lengths can increase decision-making time and cause additional delays. Moreover, JSQ requires constant queue monitoring, raising computational costs and complicating system implementation. JSQ does not account for specific server characteristics like processing speed or task priorities, which may lead to inefficient resource use in systems with heterogeneous servers.
+However, there are disadvantages. Masahiro Kobayashi, Yutaka Sakuma, and Masakiyo Miyazawa in their study “Join the shortest queue among k parallel queues: tail asymptotics of its stationary distribution” state that JSQ can be ineffective under high load variability. Frequent changes in queue lengths can increase decision-making time and cause additional delays. Moreover, JSQ requires constant queue monitoring, raising computational costs and complicating system implementation. JSQ does not account for specific server characteristics like processing speed or task priorities, which may lead to inefficient resource use in systems with heterogeneous servers.
 
 ## Chapter 2. Modeling Mass Service Systems with the JSQ Policy
 
