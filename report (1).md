@@ -73,7 +73,7 @@ header-includes:
 
 In the modern world, where the amount of processed information and the number of users constantly grow, it is important to understand the significance of mass service systems (MSS) as they enable various technologies and infrastructures to operate efficiently. It is also crucial to recognize the necessity for improvements and optimizations in these systems under conditions of high competition and demanding user requirements.
 
-For instance, in the study $“Analysis of Join-the-Shortest-Queue Routing for Web Server Farms”$ by Varun Gupta, Mor Harchol-Balter, Karl Sigman, and Ward Whitt, it is noted that MSS in the communication sector face continuous load increases. Proper management, such as the use of the Join-the-Shortest-Queue (JSQ) policy, can reduce response wait times and improve overall service quality. JSQ is particularly important for "server farms" as they handle vast amounts of web requests. The main idea of JSQ is to evenly distribute the load among servers, preventing overloads and enhancing response times. JSQ can be applied not only in IT but also in other fields like manufacturing and logistics. Thus, researching the JSQ policy is highly relevant as it helps manage increasing loads and demands for speed and service quality.
+For instance, in the study “Analysis of Join-the-Shortest-Queue Routing for Web Server Farms” by Varun Gupta, Mor Harchol-Balter, Karl Sigman, and Ward Whitt, it is noted that MSS in the communication sector face continuous load increases. Proper management, such as the use of the Join-the-Shortest-Queue (JSQ) policy, can reduce response wait times and improve overall service quality. JSQ is particularly important for "server farms" as they handle vast amounts of web requests. The main idea of JSQ is to evenly distribute the load among servers, preventing overloads and enhancing response times. JSQ can be applied not only in IT but also in other fields like manufacturing and logistics. Thus, researching the JSQ policy is highly relevant as it helps manage increasing loads and demands for speed and service quality.
 
 ### 2. Research Objectives and Tasks
 
@@ -119,7 +119,7 @@ The main parameters determining MSS efficiency include request flow intensity ($
 
 #### 2.1 JSQ Policy Operation Principle
 
-The JSQ policy aims to minimize client wait times by directing new requests to the shortest queue. Foley R.D. and McDonald D.R. in their work $“Join the shortest queue: stability and exact asymptotics”$ describe how this policy operates. When a new request enters the system, it compares the lengths of all available queues and joins the shortest one.
+The JSQ policy aims to minimize client wait times by directing new requests to the shortest queue. Foley R.D. and McDonald D.R. in their work “Join the shortest queue: stability and exact asymptotics” describe how this policy operates. When a new request enters the system, it compares the lengths of all available queues and joins the shortest one.
 
 #### 2.2 JSQ Policy Advantages and Disadvantages
 
