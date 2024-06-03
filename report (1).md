@@ -163,7 +163,7 @@ In systems with infinite buffers, each server can handle an unlimited number of 
 
 ### 3. Analysis of Characteristics of Systems with Infinite Buffers
 
-Varun Gupta and colleagues in their study $“Analysis of Join-the-Shortest-Queue Routing for Web Server Farms”$ analyze such systems, presenting their numerical experiment results. One key metric they analyzed was the average request wait time in the system. Results showed that using JSQ policy significantly reduces average wait time compared to other load distribution strategies. This is because JSQ effectively balances the load among all available servers, preventing long queues. They also studied queue length distribution, finding that with infinite buffers, the probability of very long queues is extremely low, as JSQ ensures even request distribution. Their experiments also showed that even under high loads, the system remains stable.
+Varun Gupta and colleagues in their study “Analysis of Join-the-Shortest-Queue Routing for Web Server Farms” analyze such systems, presenting their numerical experiment results. One key metric they analyzed was the average request wait time in the system. Results showed that using JSQ policy significantly reduces average wait time compared to other load distribution strategies. This is because JSQ effectively balances the load among all available servers, preventing long queues. They also studied queue length distribution, finding that with infinite buffers, the probability of very long queues is extremely low, as JSQ ensures even request distribution. Their experiments also showed that even under high loads, the system remains stable.
 
 ### 4. Analysis of Characteristics of Systems with Finite Buffers
 
