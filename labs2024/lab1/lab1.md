@@ -105,6 +105,8 @@ $\rho = \lambda/(m\mu)$
 $L=\lambda W$, $L_q = \lambda W_q$
 
 $P{Q_i = 0}$
+
+$L = \lambda \cdot W$
 ---
 
 # Список литературы
