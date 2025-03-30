@@ -97,6 +97,8 @@ ADD,Коммит и логи.
 $\rho \to 1$
 $m \to \infty$
 где $d \ll m$
+
+$\rho = \lambda/(m\mu)$
 ---
 
 # Список литературы
